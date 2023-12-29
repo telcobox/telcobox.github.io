@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__, static_url_path="/static")
 
@@ -27,4 +28,10 @@ def index_page():
 #    return render_template('contact.html')
 
 if __name__ == '__main__':
-    app.run(host="127.0.0.1", port=9090, debug=True)
+    # Generated static files in build folder. 
+    os.makedirs('build', exist_ok=True)
+
+    with app.app_context():
+        from flask_frozen import Freezer
+        freezer = Freezer(app)
+        freezer.freeze()
