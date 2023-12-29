@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Network, System, Cloud">
+        <meta name="description" content="Telcobox is a platform focusing on the integration of cloud computing and networking, and is creating informative content." />
+        <meta name="author" content="Bugra Kilic">
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" sizes="32px" type="image/x-icon" href="../static/images/tb_red_large.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+        <!-- Javascript section -->
+        <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                  const searchIcon = document.querySelector('.search-icon');
+                  const searchBox = document.querySelector('.search-box');
+
+                  searchIcon.addEventListener('click', function(event) {
+                    event.stopPropagation(); // Prevents click event from reaching document
+                    this.classList.toggle('active');
+                  });
+
+                  searchBox.addEventListener('click', function(event) {
+                    event.stopPropagation(); // Prevents click event from reaching document
+                  });
+
+                  // Close search box when clicking anywhere outside of it
+                  document.addEventListener('click', function() {
+                    searchIcon.classList.remove('active');
+                  });
+                });
+        </script>
+</head>
+
+<body>
+        <header>
+                <div class="logo">
+                        <a href="https://telcobox.net"><img src="../static/images/logo-black-png.png" alt="Telcobox Logo"></a>
+                </div>
+                <div class="menu-and-search">
+                        <nav>
+                                <ul>
+                                        <li><a href="../index.html">Home</a></li>
+                                        <li><a href="../pages/resources.html">Resources</a></li>
+                                        <li><a href="../pages/glossary.html">Glossary</a></li>
+                                        <li><a href="../pages/about.html">About</a></li>
+                                        <li><a href="../pages/contact.html">Contact</a></li>
+                                </ul>
+                        </nav>
+                        <div class="search-icon">
+                                <i class="fas fa-search"></i>
+                                <div class="search-box">
+                                <input type="text" placeholder="Search...">
+                                <button>Search</button>
+                                </div>
+                        </div>
+                </div>
+        </header>
+        <main>
+        <div class="intro-section" style="background-color: #A60000;">
+                <h1>About Telcobox</h1>
+        </div>
+
+        <!-- main page body content -->
+        <div class="content-pages">
+            <p>Telcobox is a digital platform focusing on the integration of cloud computing and telecommunications.
+
+                At Telcobox, our mission is to revolutionize the network and cloud community by seamlessly integrating cloud computing and telecommunications. We strive to empower individuals and organizations through valuable resources, technical insights, and open-source projects, driving innovation and creating a better future for the network and cloud industry. Our vision is to become the leading platform that bridges the gap between cloud computing and telecommunications, fostering a vibrant and collaborative community where professionals, developers, and enthusiasts can exchange ideas, share knowledge, and contribute to open-source projects, accelerating the growth and development of the network and cloud industry on a global scale.</p>
+                
+                <p>For more information and business inquiries, please see Contact page.</p>
+        </div>
+
+
+        <hr class="separator">
+
+        </main>
+        <footer>
+                <div>
+                        <a href="mailto:hello@telcobox.net" target="_blank"><img src="../static/images/email.png" alt="email"></a>
+                        <a href="https://twitter.com/telcobox" target="_blank"><img src="../static/images/twitter.png" alt="twitter"></a>
+                        <a href="https://github.com/telcobox" target="_blank"><img src="../static/images/github.png" alt="github"></a>
+                </div>
+                <br>
+                <div>
+                        <address> 
+                        Maintained by passion. Hosted on <a rel="nofollow" href="https://pages.github.com/">GitHub Pages</a>. 
+                        </address>
+                </div>
+                <br>
+                <div>
+                        <address>Copyright © 2024, Telcobox. All rights reserved. </address><br>
+                </div>
+        </footer>
+</body>
+</html>
