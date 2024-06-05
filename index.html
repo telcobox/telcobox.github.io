@@ -22,32 +22,22 @@
         gtag('config', 'G-ZF1DLNZ0YQ');
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        const searchIcon = document.querySelector('.search-icon');
-        const searchBox = document.querySelector('.search-box');
-        const searchButton = document.querySelector('#searchButton');
-        const searchInput = document.querySelector('#searchInput');
+        document.addEventListener("DOMContentLoaded", function() {
+                const searchIcon = document.querySelector('.search-icon');
+                const searchBox = document.querySelector('.search-box');
 
-        searchIcon.addEventListener('click', function(event) {
+                searchIcon.addEventListener('click', function(event) {
                 event.stopPropagation();
-                searchBox.style.display = searchBox.style.display === 'none' ? 'block' : 'none';
-        });
+                this.classList.toggle('active');
+                });
 
-        document.addEventListener('click', function() {
-                searchBox.style.display = 'none';
-        });
-
-        searchBox.addEventListener('click', function(event) {
+                searchBox.addEventListener('click', function(event) {
                 event.stopPropagation();
-        });
+                });
 
-        // Handle search button click
-        searchButton.addEventListener('click', function() {
-                const query = searchInput.value;
-                if (query) {
-                window.location.href = `search.html?query=${encodeURIComponent(query)}`;
-                }
-        });
+                document.addEventListener('click', function() {
+                searchIcon.classList.remove('active');
+                });
         });
     </script>
 </head>
@@ -57,7 +47,7 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <a href="https://telcobox.net" class="navbar-brand">
-                    <img src="static/images/logo-black-png.png" alt="Telcobox Logo" height="100">
+                    <img src="static/images/logo-black-png.png" alt="Telcobox Logo" height="75">
                 </a>
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,8 +65,8 @@
                 <div class="search-icon position-relative">
                     <i class="fas fa-search"></i>
                     <div class="search-box position-absolute bg-white p-2 shadow" style="display: none;">
-                        <input type="text" class="form-control" placeholder="Search..." id="searchInput">
-                        <button class="btn btn-primary mt-2" id="searchButton">Search</button>
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <button class="btn btn-primary mt-2">Search</button>
                     </div>
                 </div>
             </div>
