@@ -115,9 +115,8 @@ table td {
     padding: 25px;
 }
 
-.substack {
-    display: flex;
-    justify-content: center;
+.cta-section {
+    text-align: center;
 }
 
 .content-pages {
